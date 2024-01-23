@@ -1,0 +1,36 @@
+.form-container {
+  border: 0.5px solid rgb(202, 199, 199);
+  padding: 20px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='date'],
+textarea {
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+}
+.e-toolbar-items {
+  margin-top: -4%;
+}

@@ -1,0 +1,24 @@
+e-control e-grid e-lib e-gridhover e-responsive e-default e-droppable e-tooltip e-keyboard {
+  width: 94%;
+}
+
+/* .date-container {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; 
+  } */
+  
+  
+  .form-select{
+    width: 70%;
+  }
+
+
+  .left-aligned-form {
+    text-align: left;
+  }
+
+  .e-rte-toolbar e-control e-toolbar e-lib e-extended-toolbar e-keyboard e-tooltip null{
+    top:9px;
+  }

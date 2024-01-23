@@ -1,0 +1,24 @@
+.genarateResumeModal .e-dialog {
+  background: #b3b1b14f;
+  opacity: 1;
+}
+
+.genarateResumeModal .e-dialog .e-dlg-header {
+  text-align: start;
+  font-size: 20px;
+  font-weight: bold;
+}
+.e-dlg-overlay {
+  background-color: rgba(0, 0, 0, 0.863);
+  opacity: 0.1;
+  filter: blur(100px);
+  -webkit-filter: blur(100px);
+}
+
+.genarateResumeModal .e-dialog .e-btn .e-btn-icon.e-icon-dlg-close {
+  font-size: 12px;
+  font-weight: bolder;
+}
+.genarateResumeModal .e-dialog .e-dlg-content .content-header {
+  text-align: start;
+}

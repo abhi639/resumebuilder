@@ -1,0 +1,11 @@
+.d-flex {
+
+    background-color: white;
+    
+    }
+
+    .e-richtexteditor .e-toolbar-wrapper{
+
+        position: relative;
+        top: -12px;
+    }

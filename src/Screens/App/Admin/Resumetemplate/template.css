@@ -1,0 +1,27 @@
+#rtePrint .e-richtexteditor .e-rte-content .e-content {
+/*     
+    width: 180%;
+    height: 317px; */
+}
+
+#rtePrint .content-wrapper {
+    /* width: 180%;
+    height: 100px;
+    margin: 0; */
+}
+#print-value .e-rte-hidden{
+display: none;
+}
+.char_block:hover {
+    background-color: #e0e0e0; /* Change the background color on hover */
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+.e-small.e-btn .e-btn-icon{
+    margin: -7px !important;
+}
+
+.e-small.e-btn.e-icon-btn{
+
+    padding: 2px 5px  1px;
+    margin: 0 -2px; 
+}

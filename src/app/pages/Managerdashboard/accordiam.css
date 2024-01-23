@@ -1,0 +1,137 @@
+.e-accordion .e-acrdn-item.e-select.e-active > .e-acrdn-header .e-acrdn-header-content,
+.e-accordion .e-acrdn-item.e-select.e-item-focus > .e-acrdn-header .e-acrdn-header-content {
+  color: #010e18 !important;
+  font-weight: 900;
+}
+.e-accordion .e-acrdn-item.e-select > .e-acrdn-header {
+  height: 53px;
+}
+
+/* Your CSS file or component's styling */
+
+.custom-multiselect .e-multi-select-wrapper {
+  height: 55px; /* Adjust the height as needed */
+}
+
+.e-accordion .e-acrdn-item.e-select.e-active > .e-acrdn-header .e-acrdn-header-content,
+.e-accordion .e-acrdn-item.e-select.e-item-focus > .e-acrdn-header .e-acrdn-header-content {
+  color: #010e18 !important;
+  font-weight: 900;
+}
+
+.e-accordion .e-acrdn-item.e-select > .e-acrdn-header {
+  height: 53px;
+  align-items: center;
+}
+
+#selectResumeTemplateDropdown {
+  color: #010e18 !important;
+  font-weight: 900;
+  height: 53px;
+  align-items: center;
+}
+
+#generateResumeTemplateDropdown {
+  color: #010e18 !important;
+  font-weight: 900;
+  height: 101%;
+  align-items: center;
+}
+
+.sixaccorndian {
+  margin-bottom: 2%;
+}
+
+.firstaccorndian {
+  margin-top: 2%;
+}
+
+.accordian {
+  margin-top: 2%;
+}
+
+.e-accordion .e-acrdn-header:focus {
+  background-color: lightgray;
+  outline: none;
+}
+
+.e-acrdn-item e-select {
+  font-weight: 900;
+}
+
+e-acrdn-header-content {
+  background-color: white !important;
+  font-weight: 900;
+}
+
+e-acrdn-header-content {
+  font-weight: 900;
+  /* / padding: 1% !important; / */
+}
+.e-acrdn-header {
+  background-color: rgb(166, 185, 196) !important;
+  /* / padding: 1% !important; /
+  / margin-top: 2%; /
+  / margin-bottom: 1%; / */
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.edit-details-button {
+  background-color: transparent;
+  color: grey;
+}
+.e-tgl-collapse-icon {
+  margin-bottom: 1%;
+}
+.e-control {
+  width: 101%;
+  padding-top: 2%;
+}
+
+.e-acrdn-item {
+  background-color: white !important;
+  border-color: white !important;
+}
+
+.e-toolbar-items {
+  margin-top: -37%;
+}
+.rte-editor {
+  height: 300px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.e-acrdn-content {
+  margin-top: -4%;
+}
+.e-acrdn-item firstaccorndian e-select {
+  align-items: center;
+}
+
+.badge-close {
+  margin-left: 5px; /* Add some space to the left of the close button */
+  cursor: pointer;
+}
+.e-multi-select-wrapper {
+  height: '55px';
+}
+
+/* Add up and down arrow icons to accordion headers */
+.e-accordion .e-acrdn-item .e-acrdn-header .e-acrdn-header-content::after {
+  content: '\f103'; /* Unicode for down arrow icon (Font Awesome) */
+  font-family: 'Font Awesome';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.e-accordion .e-acrdn-item.e-select .e-acrdn-header .e-acrdn-header-content::after {
+  content: '\f104'; 
+}
+
+.footer py-4 d-flex flex-lg-column{
+  background-color: aqua;
+}

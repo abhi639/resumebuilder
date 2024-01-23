@@ -1,0 +1,12 @@
+.e-toolbar-items {
+  margin: 0.5%;
+}
+.e-btn e-flat e-primary e-active {
+  margin-top: 8%;
+}
+
+.post {
+  margin-right: 1%;
+  margin-left: 1%;
+  border-radius: 1%;
+}

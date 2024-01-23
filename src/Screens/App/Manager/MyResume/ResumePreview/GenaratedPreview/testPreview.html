@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <script defer>
+    async function genaratePreview() {
+      //   alert('button Clicked')
+      const user = {
+        id: 2,
+        accssToken:
+          'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYW5hZ2VyMUBnbWFpbC5jb20iLCJpYXQiOjE3MDAzNzE1ODUsImV4cCI6MTcwMDQ1Nzk4NX0.ng-HYXgrxvUYwvQ8a8F9YxWt9HH0y4fjnRgZEoZ-Qu0',
+        name: 'vinni',
+        templateId: 8,
+      }
+      let api = await fetch(
+        `http://localhost:8082/templates/replace/${user.templateId}/${user.id}`,
+        {
+          header: {
+            Authorization: `Bearer ${user.accssToken}`,
+          },
+        }
+      )
+      let data = await api.json()
+      console.log('api data', data)
+      const obj = {
+        status: 'OK',
+        type: 'true',
+        message: 'Template updated SuccessFully',
+        data: {
+          template_id: null,
+          template_name: null,
+          profile_summary:
+            '<p>    Role:- Java Developer</p><ul><li>ProficientIn:java, HTML,css,Js</li><li>Familiar With:Liferay</li><li>Databases:MySQL, Oracle</li><li>Frameworks:Spring, React</li><span>Summary:<br>A Employee with 10 years of experience</span></ul>',
+          professional_experience:
+            '<ul><li><div><span>DTX.company ,Pune as a Team lead</span></div></li></ul><ul><li><div><span>Fca.org ,Mysore as a Java Developer </span></div></li></ul>',
+          projects:
+            '<ol><li>Text generator - Kvn.co</li><ul><li>Technologies:</li><li>Environment: Java web Developement</li></ul></ol><ol><li>Cookery webApp - cookery.io</li><ul><li>Technologies:</li><li>Environment: Embeded Systems</li></ul></ol>',
+          certificates:
+            '<ol><li>Java Professional (2023-11-17)<br>Url:-javacertificateurl</li></ol><ol><li>Software development Basics (2022-11-17)<br>Url:-SDECerificates.io</li></ol>',
+          modified_by: null,
+          modified_on: null,
+          _deleted: false,
+        },
+      }
+      // console.log(obj.data)
+      replaceContent(obj.data, user.name)
+    }
+
+    function replaceContent(data, username) {
+      const profile = document.getElementById('profileSummary')
+      const experience = document.getElementById('experience')
+      const projects = document.getElementById('projects')
+      const certificates = document.getElementById('certificates')
+      const name = document.getElementById('name')
+
+      name.innerHTML = username
+      if (data.profile_summary != '' && data.profile_summary != null) {
+        profile.getElementsByClassName('content')[0].innerHTML = data.profile_summary
+        profile.style.display = 'block'
+      }
+      if (data.professional_experience != null && data.professional_experience != '') {
+        experience.getElementsByClassName('content')[0].innerHTML = data.professional_experience
+        experience.style.display = 'block'
+      }
+      if (data.projects != null && data.projects != '') {
+        projects.getElementsByClassName('content')[0].innerHTML = data.projects
+        projects.style.display = 'block'
+      }
+      if (data.certificates != null && data.certificates != '') {
+        certificates.getElementsByClassName('content')[0].innerHTML = data.certificates
+        certificates.style.display = 'block'
+      }
+    }
+  </script>
+  <body>
+    <div class="w-90">
+      <div class="mx-4"><button onclick="genaratePreview()">Genarate</button></div>
+      <div class="border border-secondary-subtle w-75 mx-auto p-4">
+        <h1 class="text-center">Preview</h1>
+        <hr />
+        <div class="generatedPreview mx-auto">
+          <header>
+            <div class="d-flex flex-column w-100">
+              <div class="" style="text-align: end"><span>LoGO</span></div>
+              <div class="" style="text-align: center"><span id="name">Name</span></div>
+            </div>
+          </header>
+          <section class="profileSummary" id="profileSummary" style="display: none">
+            <div class="summary" id="summary">
+              <h4>Summary</h4>
+              <div class="content" id="content1"></div>
+            </div>
+            <!-- <div class="professionalSummary" id="professionalSummary">
+              <h4>Professional Summary</h4>
+              <div class="content" id="content2"></div>
+            </div>
+            <div class="technologyExpertise" id="technologyExpertise">
+              <h4>Technology Expertise</h4>
+              <div class="content" id="content3"></div>
+            </div> -->
+          </section>
+          <section class="experience" id="experience" style="display: none">
+            <div class="professionalExperience" id="professionalExperience">
+              <h4>Professional Experience</h4>
+              <div class="content" id="content4"></div>
+            </div>
+          </section>
+          <section class="projects" id="projects" style="display: none">
+            <div class="projectsList" id="projectsList">
+              <h4>Projects</h4>
+              <div class="content" id="content5"></div>
+            </div>
+          </section>
+          <section class="certificates" id="certificates" style="display: none">
+            <div class="certificatesList" id="certificatesList">
+              <h4>Certifications</h4>
+              <div class="content" id="content5"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

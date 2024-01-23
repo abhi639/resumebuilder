@@ -1,0 +1,60 @@
+form {
+    width: 700px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .my-form {
+    margin-left: 25px;
+   margin-top: 15px;
+  }
+  
+  button {
+   
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .optional{
+    color: #ccc;
+    font-size: 12px;
+  }
+  /* CSS for the white div */
+.color{
+  background-color: #FFFFFF;
+    width: 219%;
+}
+.edit-icon{
+  position: absolute;
+  z-index: 1;
+  margin-left: 99px;
+  margin-top: -35px;
+  
+}
+.edit-icon-inner {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.edit-icon-inner svg {
+  color: white;
+  font-size: 16px; /* Adjust the font size as needed */
+}
